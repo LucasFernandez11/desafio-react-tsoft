@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+/* Estilos base */
+* {
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000000;
+}
+
+/* Estilos personalizados para el scroll horizontal */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Animaciones personalizadas */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-gradient {
+  animation: gradientBG 8s ease infinite;
+  background-size: 200% 200%;
+}
+
+.animate-bg {
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Estilos para el menú deslizante en móviles */
+@media (max-width: 1023px) {
+  .sidebar-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 50;
+    background-color: #18181b; /* bg-zinc-900 */
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sidebar-content.flex {
+    transform: translateX(0);
+  }
+  
+  .sidebar-content.flex + div {
+    display: block !important;
+    z-index: 40;
+  }
+  
+  .sidebar-content .h-\[60vh\] {
+    height: 60vh;
+  }
+  
+  .sidebar-content .h-\[40vh\] {
+    height: 40vh;
+  }
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 8px;
+  padding-top: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 4px;
+  margin: 0 16px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+  min-width: 100px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+  cursor: pointer;
+}
+
+/* Asegurar que el contenedor de scroll tenga espacio para la barra */
+.overflow-x-auto {
+  scrollbar-gutter: stable;
+  padding-bottom: 2px;
+}
