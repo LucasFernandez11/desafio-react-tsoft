@@ -1,8 +1,8 @@
 import useApi from "../../../hooks/useApi"
-import type { Movie, MovieResponse } from "../../../types/movies.types"
-import { Loading } from "../../atoms/State/Loading"
+import type { Movie, MovieResponse } from "../../../types/Movie"
+import { Loading } from "../../ui/State/Loading"
 import Card from "../Card/Card"
-import { Error } from "../../atoms/State/Error"
+import { Error } from "../../ui/State/Error"
 
 const title = "Nuevos trailers"
 export function Trailer() {
