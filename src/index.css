@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+/* ===== Base global ===== */
+* {
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #17171B;
+  --color-card: #f5f5f5;
+  --color-accent: #f97316;
+  --color-muted: #e5e5e5;
+
+  --scroll-track: #f3f4f6;   /* light: gray-100 */
+  --scroll-thumb: #cbd5e1;   /* light: gray-300 */
+  --scroll-thumb-hover: #94a3b8; /* light: gray-400 */
+}
+
+.dark {
+  --color-bg: #121212;
+  --color-text: #eaeaea;
+  --color-card: #1e1e1e;
+  --color-accent: #f97316;
+  --color-muted: #2e2e2e;
+
+  --scroll-track: #1e1e1e;   /* dark: gray-800 */
+  --scroll-thumb: #4b5563;   /* dark: gray-600 */
+  --scroll-thumb-hover: #6b7280; /* dark: gray-500 */
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.btn-orange {
+  background-color: #F36F45; 
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 0.375rem; 
+  font-weight: bold;
+  transition: background-color 300ms;
+}
+.btn-orange:hover {
+  background-color: #d65f3b; 
+  cursor: pointer;
+}
+
+/* ===== Scroll personalizado ===== */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  padding-top: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: var(--scroll-track);
+  border-radius: 4px;
+  margin: 0 16px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 4px;
+  min-width: 100px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover);
+  cursor: pointer;
+}
+
+.overflow-x-auto {
+  scrollbar-gutter: stable;
+  padding-bottom: 2px;
+}
+
+/* ===== Animaciones personalizadas ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+.animate-fade-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+.animate-gradient {
+  animation: gradientBG 8s ease infinite;
+  background-size: 200% 200%;
+}
+.animate-bg {
+  animation: gradientBG 15s ease infinite;
+}
+
+/* ===== Menú móvil lateral ===== */
+@media (max-width: 1023px) {
+  .sidebar-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 50;
+    background-color: #18181b;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .sidebar-content.flex {
+    transform: translateX(0);
+  }
+
+  .sidebar-content.flex + div {
+    display: block !important;
+    z-index: 40;
+  }
+
+  .sidebar-content .h-\[60vh\] {
+    height: 60vh;
+  }
+
+  .sidebar-content .h-\[40vh\] {
+    height: 40vh;
+  }
+}
