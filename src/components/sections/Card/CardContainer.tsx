@@ -91,12 +91,35 @@ export default function CardContainer({
       )}
 
       {/* CONTINUE (scroll horizontal) */}
+
       {layout === "continue" && (
-        <div className="overflow-x-auto scrollbar-thin px-2">
-          <div className="flex gap-4 w-max">
-            {displayedMovies.map((movie) => (
-              <div key={movie.id} className="flex-shrink-0 w-[300px] md:w-[450px] mb-2">
+        <div className="relative px-2">
+          {/* Mobile: horizontal scroll */}
+          {!showAll ? (
+            <div className="overflow-x-auto scrollbar-thin">
+              <div className="flex gap-4 w-max">
+                {displayedMovies.map((movie) => (
+                  <div key={movie.id} className="flex-shrink-0 w-[300px] md:w-[450px] mb-2">
+                    <Card
+                      id={movie.id}
+                      title={movie.title}
+                      imagePath={movie.backdrop_path || movie.poster_path || ''}
+                      popularity={movie.vote_average}
+                      description={movie.overview}
+                      release_date={movie.release_date}
+                      original_language={movie.original_language}
+                      layout={layout}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : (
+            // Desktop + showAll: Grid vertical
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {displayedMovies.map((movie) => (
                 <Card
+                  key={movie.id}
                   id={movie.id}
                   title={movie.title}
                   imagePath={movie.backdrop_path || movie.poster_path || ''}
@@ -106,19 +129,44 @@ export default function CardContainer({
                   original_language={movie.original_language}
                   layout={layout}
                 />
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
 
+
+
+
       {/* POPULAR (scroll horizontal) */}
       {layout === "popular" && (
-        <div className="overflow-x-auto scrollbar-thin px-2">
-          <div className="flex gap-4 w-max">
-            {displayedMovies.map((movie) => (
-              <div key={movie.id} className="flex-shrink-0 w-[260px] md:w-[300px] mb-2">
+        <div className="relative px-2">
+          {/* Mobile: scroll horizontal */}
+          {!showAll ? (
+            <div className="overflow-x-auto scrollbar-thin">
+              <div className="flex gap-4 w-max">
+                {displayedMovies.map((movie) => (
+                  <div key={movie.id} className="flex-shrink-0 w-[260px] md:w-[300px] mb-2">
+                    <Card
+                      id={movie.id}
+                      title={movie.title}
+                      imagePath={movie.backdrop_path || movie.poster_path || ''}
+                      popularity={movie.vote_average}
+                      description={movie.overview}
+                      release_date={movie.release_date}
+                      original_language={movie.original_language}
+                      layout={layout}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : (
+            // Desktop y modo expandido: grilla
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {displayedMovies.map((movie) => (
                 <Card
+                  key={movie.id}
                   id={movie.id}
                   title={movie.title}
                   imagePath={movie.backdrop_path || movie.poster_path || ''}
@@ -128,11 +176,12 @@ export default function CardContainer({
                   original_language={movie.original_language}
                   layout={layout}
                 />
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
+
     </section>
   );
 }
