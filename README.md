@@ -1,69 +1,42 @@
-# React + TypeScript + Vite
+# Proyecto React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta aplicación está desarrollada utilizando las siguientes tecnologías principales:
 
-Currently, two official plugins are available:
+- **React**: Biblioteca para construir interfaces de usuario.
+- **TypeScript**: Superset de JavaScript que añade tipado estático.
+- **Vite**: Herramienta de desarrollo rápida para proyectos web modernos.
+- **Tailwind CSS**: Framework de utilidades para estilos rápidos y personalizables.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+# API pública TMDB
+- **The Movie Database (TMDB) API**: Fuente pública de datos de películas utilizada para obtener información en la aplicación.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ¿Cómo clonar, instalar y correr la aplicación?
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Sigue estos pasos para obtener una copia local y ejecutar la aplicación:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 1. Clonar el repositorio
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/LucasFernandez11/desafio-react-tsoft.git
+
+
+### 2. Instalar dependencias
+
+Asegúrate de tener [Node.js](https://nodejs.org/) instalado. Luego ejecuta:
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 3. Correr la aplicación en modo desarrollo
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Esto iniciará el servidor de desarrollo. Abre tu navegador en [http://localhost:5173](http://localhost:5173) para ver la aplicación.
+
+---
+
+Si tienes dudas o problemas, revisa la documentación oficial de [Vite](https://vitejs.dev/), [React](https://react.dev/) y [TypeScript](https://www.typescriptlang.org/).
