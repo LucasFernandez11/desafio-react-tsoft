@@ -37,14 +37,14 @@ export default function CardContainer({
       {/* Header con título + botón */}
       {layout !== "hero" && title && (
         <div className="flex items-center justify-between px-2 mb-3">
-          <h2 className="text-lg md:text-xl font-semibold text-white dark:text-white">
+          <h2 className="text-lg md:text-xl font-semibold ">
             {title}
           </h2>
 
           {movies.length > slice && (
             <button
               onClick={() => setShowAll(!showAll)}
-              className="text-sm text-gray-400 hover:text-white transition"
+              className="text-sm transition"
             >
               {showAll ? 'Show less' : `All movies (${movies.length})`} &gt;
             </button>

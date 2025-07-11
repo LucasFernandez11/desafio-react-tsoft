@@ -27,7 +27,7 @@ export function GenresFilters() {
 
       {genres.length > 5 && (
         <button
-          className="text-xs text-gray-400 hover:text-white transition-colors"
+          className="  transition-colors"
           onClick={() => setShowAll(prev => !prev)}
         >
           {showAll ? 'Show less' : `Show all (${genres.length})`}

@@ -18,6 +18,18 @@
   --scroll-thumb-hover: #94a3b8; /* light: gray-400 */
 }
 
+.light {
+  --color-bg: #eaeaea;
+  --color-text: #2e2e2e;
+  --color-card: #f5f5f5;
+  --color-accent: #f97316;
+  --color-muted: #e5e5e5;  
+
+  --scroll-track: #f3f4f6;   
+  --scroll-thumb: #cbd5e1;  
+  --scroll-thumb-hover: #94a3b8; 
+}
+
 .dark {
   --color-bg: #121212;
   --color-text: #eaeaea;
@@ -25,9 +37,9 @@
   --color-accent: #f97316;
   --color-muted: #2e2e2e;
 
-  --scroll-track: #1e1e1e;   /* dark: gray-800 */
-  --scroll-thumb: #4b5563;   /* dark: gray-600 */
-  --scroll-thumb-hover: #6b7280; /* dark: gray-500 */
+  --scroll-track: #1e1e1e;   
+  --scroll-thumb: #4b5563;   
+  --scroll-thumb-hover: #6b7280; 
 }
 
 body {

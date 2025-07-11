@@ -14,9 +14,9 @@ const HomeLayout = () => {
   return (
     <div className="flex flex-col lg:flex-row min-h-screen relative">
       {/* Botón global en mobile */}
-      <div className="w-full flex items-center justify-between p-4 border-b border-zinc-700 bg-zinc-900 z-30 lg:hidden">
-        <span className="font-medium text-white">Menú lateral</span>
-        <button onClick={toggleSidebar} className="text-white">
+      <div className="w-full flex items-center justify-between p-4 border-b border-zinc-700   z-30 lg:hidden">
+        <span className="font-medium ">Menú lateral</span>
+        <button onClick={toggleSidebar} className="">
           <svg
             className={`w-5 h-5 transform transition-transform duration-300 ${sidebarOpen ? "rotate-90" : ""}`}
             fill="none"
@@ -31,13 +31,13 @@ const HomeLayout = () => {
       {/* Sidebar */}
       {sidebarOpen && (
         <div
-          className="z-50 top-[60px] bg-zinc-900 w-4/5 max-w-xs lg:w-[25%] xl:w-[20%] 2xl:w-[18%] h-screen flex flex-col border-r border-zinc-700 transition-all duration-300 fixed  left-0 lg:static"
+          className="z-50 top-[60px]  w-4/5 max-w-xs lg:w-[25%] xl:w-[20%] 2xl:w-[18%] h-screen flex flex-col border-r border-zinc-700 transition-all duration-300 fixed  left-0 lg:static"
         >
           {/* Botón cerrar mobile - fijo arriba */}
-          <div className="lg:hidden sticky  z-20 bg-zinc-900 p-4 border-b border-zinc-700">
+          <div className="lg:hidden sticky  z-20  p-4 border-b border-zinc-700">
             <button
               onClick={closeSidebar}
-              className="text-white text-sm font-medium border border-white/30 px-3 py-1 rounded hover:bg-white/10 transition w-full text-center"
+              className=" text-sm font-medium border border-zinc-700  px-3 py-1 rounded hover:bg-white/10 transition w-full text-center"
             >
               Cerrar menú
             </button>
@@ -47,10 +47,10 @@ const HomeLayout = () => {
           <div className="hidden lg:flex justify-end p-4">
             <button
               onClick={closeSidebar}
-              className="text-white text-sm font-medium border border-white/30 px-3 py-1 rounded hover:bg-white/10 transition"
+              className=" text-sm font-medium border border-zinc-700 px-3 py-1 rounded hover:bg-white/10 transition"
             >
               <svg
-                className="w-4 h-4 text-white"
+                className="w-4 h-4 "
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -74,13 +74,13 @@ const HomeLayout = () => {
       )}
       {/* Botón mostrar menú colapsado en desktop */}
       {!sidebarOpen && (
-        <div className="hidden lg:flex justify-end p-4 bg-zinc-900 border-b border-zinc-700">
+        <div className="hidden lg:flex justify-end p-4  border-b border-zinc-700">
           <button
             onClick={toggleSidebar}
-            className="text-white text-sm font-medium border border-white/30 px-3 py-1 rounded hover:bg-white/10 transition"
+            className=" text-sm font-medium border border-white/30 px-3 py-1 rounded hover:bg-white/10 transition"
           >
             <svg
-              className="w-4 h-4 text-white"
+              className="w-4 h-4 "
               fill="none"
               stroke="currentColor"
               strokeWidth={2}

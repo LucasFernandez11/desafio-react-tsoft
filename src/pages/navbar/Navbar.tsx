@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
 
           <Link to="/" className="group relative flex-shrink-0">
-            <h1 className="text-xl font-bold text-white tracking-wide relative transition-all duration-300 group-hover:scale-105 group-hover:text-orange-500">
+            <h1 className={`text-xl font-bold tracking-wide relative transition-all duration-300 group-hover:scale-105 group-hover:text-orange-500 ${isDark ? 'text-white' : 'text-zinc-700'}`}>
               Movie Explorer
               <span className="absolute -bottom-1 left-1/2 h-0.5 w-0 origin-center transform -translate-x-1/2 group-hover:w-full transition-all duration-300 bg-[radial-gradient(ellipse_at_center,_rgba(255,115,0,1)_0%,_rgba(255,115,0,0)_70%)]" />
             </h1>
@@ -57,7 +57,8 @@ export default function Navbar() {
             >
               {({ isActive }) => (
                 <>
-                  <span className="text-sm font-medium">Movies</span>
+                  <span className={`text-sm font-medium  ${isDark ? 'text-white' : 'text-zinc-700'
+                  }`}>Movies</span>
                   {isActive && (
                     <img
                       src={señalador}
@@ -75,7 +76,8 @@ export default function Navbar() {
             >
               {({ isActive }) => (
                 <>
-                  <span className="text-sm font-medium">TV shows</span>
+                  <span className={`text-sm font-medium  ${isDark ? 'text-white' : 'text-zinc-700'
+                  }`}>TV shows</span>
                   {isActive && (
                     <img
                       src={señalador}
@@ -93,7 +95,8 @@ export default function Navbar() {
             >
               {({ isActive }) => (
                 <>
-                  <span className="text-sm font-medium">Animations</span>
+                  <span className={`text-sm font-medium  ${isDark ? 'text-white' : 'text-zinc-700'
+                  }`}>Animations</span>
                   {isActive && (
                     <img
                       src={señalador}
@@ -111,7 +114,8 @@ export default function Navbar() {
             >
               {({ isActive }) => (
                 <>
-                  <span className="text-sm font-medium">Plans</span>
+                  <span className={`text-sm font-medium  ${isDark ? 'text-white' : 'text-zinc-700'
+                  }`}>Plans</span>
                   {isActive && (
                     <img
                       src={señalador}
@@ -184,7 +188,7 @@ export default function Navbar() {
               title="Perfil"
             >
               <UserCircleIcon
-                className={`h-7 w-7 ${isDark ? 'text-white' : 'text-zinc-900'
+                className={`h-7 w-7 ${isDark ? 'text-white' : 'text-zinc-700'
                   } transition-colors duration-300`}
               />
             </button>
