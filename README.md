@@ -80,6 +80,7 @@ npm run build-storybook  # Compila Storybook para deploy
 ## 📄 Licencia
 Este proyecto es de uso educativo y demostrativo.
 
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=LucasFernandez11&repo=desafio-react-tsoft)](https://github.com/LucasFernandez11/desafio-react-tsoft)
 
 ## Desarrollado por Lucas Fernández
 
