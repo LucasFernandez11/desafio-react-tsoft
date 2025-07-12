@@ -50,6 +50,10 @@ Abre tu navegador en:
 ## 📚 Storybook: Catálogo de Componentes
 Este proyecto cuenta con documentación visual de los componentes usando Storybook.
 
+Para ver el deploy de Storybook:
+👉 https://react-tsoft-storybook.netlify.app/ 
+
+
 🔧 Para correr Storybook en local:
 ```bash
 
@@ -57,6 +61,7 @@ npm run storybook
 ```
 Abre tu navegador en:
 👉 http://localhost:6006
+
 
 Desde ahí podés visualizar y testear componentes como:
 Card, MovieDetailView y Chip
