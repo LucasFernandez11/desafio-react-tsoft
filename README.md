@@ -82,6 +82,31 @@ npm run build            # Compila el proyecto
 npm run build-storybook  # Compila Storybook para deploy
 ```
 
+🧪 Testing: Validación de componentes y lógica
+Este proyecto cuenta con pruebas unitarias e integración utilizando:
+
+Vitest — Framework de testing moderno (compatible con Vite)
+
+@testing-library/react — Interacción con componentes como un usuario real
+
+msw — Simulación de API en tests
+
+▶️ Ejecutar todos los tests
+
+```bash
+npm run test
+```
+
+🔁 Modo watch (se vuelve a ejecutar al guardar cambios)
+
+```bash
+npm run test:watch #Ver reporte de cobertura
+```
+
+```bash
+npm run test:coverage #Esto generará una carpeta coverage/ con el porcentaje de líneas y archivos testeados.
+```
+
 ## 📄 Licencia
 Este proyecto es de uso educativo y demostrativo.
 
