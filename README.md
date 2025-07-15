@@ -12,7 +12,8 @@ Proyecto frontend desarrollado con tecnologías modernas para consumir la API p�
 - 🧠 **TypeScript** — Tipado estático robusto
 - ⚡ **Vite** — Build tool ultra rápido
 - 🎨 **Tailwind CSS** — Estilos con utilidades listas
-- 🧪 **Storybook 9** — Catálogo visual de componentes
+- ✨ **Storybook 9** — Catálogo visual de componentes
+- 🧪 Vitest — Framework de testing moderno (compatible con Vite)
 
 ---
 
