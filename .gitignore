@@ -7,12 +7,13 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Node & dist
 node_modules
 dist
 dist-ssr
 *.local
 
-# Editor directories and files
+# Editor & system files
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -22,5 +23,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment
 *.env
 .env
+
+# Test coverage
+coverage/
+coverage
+
+# MSW cache (si usás testing en navegador)
+.msw
