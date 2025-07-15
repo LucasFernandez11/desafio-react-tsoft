@@ -80,9 +80,11 @@ npm run dev              # Corre la app
 npm run storybook        # Inicia Storybook
 npm run build            # Compila el proyecto
 npm run build-storybook  # Compila Storybook para deploy
+npm run test             # Ejecuta todos los archivos de testing
+npm run test:coverage    # Generará una carpeta coverage/ con el porcentaje de líneas y archivos testeados.    
 ```
 
-🧪 Testing: Validación de componentes y lógica
+## 🧪 Testing: Validación de componentes y lógica
 Este proyecto cuenta con pruebas unitarias e integración utilizando:
 
 Vitest — Framework de testing moderno (compatible con Vite)
