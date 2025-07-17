@@ -5,6 +5,8 @@ Proyecto frontend desarrollado con tecnologías modernas para consumir la API p�
 > Este proyecto forma parte de un challenge técnico con foco en buenas prácticas, componentes reutilizables y documentación profesional.
 
 ---
+Para ver el deploy de Storybook:
+👉 https://react-tsoft.netlify.app/
 
 ## 🚀 Tecnologías principales
 
